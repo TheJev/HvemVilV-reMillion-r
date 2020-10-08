@@ -636,7 +636,7 @@ namespace HvemVilVæreMillionær
             bool stillPlaying = true;
 
             Console.WriteLine("Velkommen til Hvem Vil Være Millionær!");
-            Console.WriteLine("For at være med skal du satse et beløb mellem 100-100kr.");
+            Console.WriteLine("For at være med skal du satse et beløb mellem 10-100kr.");
             double amount = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Lad spillet starte! Hvis du er klar tryk Enter");
