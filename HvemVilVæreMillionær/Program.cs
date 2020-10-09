@@ -25,7 +25,7 @@ namespace HvemVilVæreMillionær
             }
 
             if (answer > 5)
-                return CreateQuestion(question, choise1, choise2, choise3, choise4, lifeLines, answer);
+                return CreateQuestion(question, choice1, choice2, choice3, choice4, lifeLines, answer);
 
 
 
@@ -88,7 +88,7 @@ namespace HvemVilVæreMillionær
             {
                 if (lifeLines[0] != "Tom")
                 {
-                    return CreateQuestion(question, choise1, choise2, choise3, choise4, lifeLines, answer);
+                    return CreateQuestion(question, choice1, choice2, choice3, choice4, lifeLines, answer);
                 }
             }
             else if (lifeLine == 7)
@@ -124,29 +124,29 @@ namespace HvemVilVæreMillionær
         {
             if (answer == 1)
             {
-                choise3 = " ";
-                choise4 = " ";
+                choice3 = " ";
+                choice4 = " ";
             }
 
             else if (answer == 2)
             {
-                choise1 = " ";
-                choise3 = " ";
+                choice1 = " ";
+                choice3 = " ";
             }
 
             else if (answer == 3)
             {
-                choise2 = " ";
-                choise4 = " ";
+                choice2 = " ";
+                choice4 = " ";
             }
 
             else if (answer == 4)
             {
-                choise1 = " ";
-                choise2 = " ";
+                choice1 = " ";
+                choice2 = " ";
             }
 
-            return CreateQuestion(question, choise1, choise2, choise3, choise4, lifeLines, answer);
+            return CreateQuestion(question, choice1, choice2, choice3, choice4, lifeLines, answer);
 
 
         }
@@ -344,7 +344,7 @@ namespace HvemVilVæreMillionær
             }
 
             Console.ReadKey();
-            return CreateQuestion(question, choise1, choise2, choise3, choise4, lifeLines, answer);
+            return CreateQuestion(question, choice1, choice2, choice3, choice4, lifeLines, answer);
 
         }
 
@@ -604,7 +604,7 @@ namespace HvemVilVæreMillionær
             }
 
             Console.ReadKey();
-            return CreateQuestion(question, choise1, choise2, choise3, choise4, lifeLines, answer);
+            return CreateQuestion(question, choice1, choice2, choice3, choice4, lifeLines, answer);
 
         }
 
@@ -615,10 +615,10 @@ namespace HvemVilVæreMillionær
 
         static string question;
 
-        static string choise1;
-        static string choise2;
-        static string choise3;
-        static string choise4;
+        static string choice1;
+        static string choice2;
+        static string choice3;
+        static string choice4;
 
         static int questionNumber = 1;
 
@@ -636,7 +636,7 @@ namespace HvemVilVæreMillionær
             bool stillPlaying = true;
 
             Console.WriteLine("Velkommen til Hvem Vil Være Millionær!");
-            Console.WriteLine("For at være med skal du satse et beløb mellem 10-100kr.");
+            Console.WriteLine("For at være med skal du satse et beløb mellem 1-100kr.");
             double amount = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Lad spillet starte! Hvis du er klar tryk Enter");
@@ -659,152 +659,152 @@ namespace HvemVilVæreMillionær
                 if (questionNumber == 1)
                 {
                     question = "Hvor mange dage tager det for jorden at dreje rundt om solen?";
-                    choise1 = "1. 24";
-                    choise2 = "2. 31";
-                    choise3 = "3. 360";
-                    choise4 = "4. 365";
+                    choice1 = "1. 24";
+                    choice2 = "2. 31";
+                    choice3 = "3. 360";
+                    choice4 = "4. 365";
                     answer = 4;
-                    stillPlaying = CreateQuestion(question, choise1, choise2, choise3, choise4, lifeLines, answer);
+                    stillPlaying = CreateQuestion(question, choice1, choice2, choice3, choice4, lifeLines, answer);
                 }
                 else if (questionNumber == 2)
                 {
                     question = "Hvilket fodboldhold er kendt som ”The Red Devils”?";
-                    choise1 = "1. Manchester United";
-                    choise2 = "2. Chelsea";
-                    choise3 = "3. FC Barcelona";
-                    choise4 = "4. Real Madrid";
+                    choice1 = "1. Manchester United";
+                    choice2 = "2. Chelsea";
+                    choice3 = "3. FC Barcelona";
+                    choice4 = "4. Real Madrid";
                     answer = 1;
-                    stillPlaying = CreateQuestion(question, choise1, choise2, choise3, choise4, lifeLines, answer);
+                    stillPlaying = CreateQuestion(question, choice1, choice2, choice3, choice4, lifeLines, answer);
                 }
                 else if (questionNumber == 3)
                 {
                     question = "Hvilken Formel 1 kører har vundet flest mesterskaber?";
-                    choise1 = "1. Lewis Hamilton";
-                    choise2 = "2. Michael Schumacher";
-                    choise3 = "3. Kevin Magnussen";
-                    choise4 = "4. Antonio Giovinazzi";
+                    choice1 = "1. Lewis Hamilton";
+                    choice2 = "2. Michael Schumacher";
+                    choice3 = "3. Kevin Magnussen";
+                    choice4 = "4. Antonio Giovinazzi";
                     answer = 2;
-                    stillPlaying = CreateQuestion(question, choise1, choise2, choise3, choise4, lifeLines, answer);
+                    stillPlaying = CreateQuestion(question, choice1, choice2, choice3, choice4, lifeLines, answer);
                 }
                 else if (questionNumber == 4)
                 {
                     question = "Hvad er det mindste land i verden?";
-                    choise1 = "1. Vatikanstaten";
-                    choise2 = "2. Danmark";
-                    choise3 = "3. færøerne";
-                    choise4 = "4. Monaco";
+                    choice1 = "1. Vatikanstaten";
+                    choice2 = "2. Danmark";
+                    choice3 = "3. færøerne";
+                    choice4 = "4. Monaco";
                     answer = 1;
-                    stillPlaying = CreateQuestion(question, choise1, choise2, choise3, choise4, lifeLines, answer);
+                    stillPlaying = CreateQuestion(question, choice1, choice2, choice3, choice4, lifeLines, answer);
                 }
                 else if (questionNumber == 5)
                 {
                     question = "Hvilken er verdens længste flod?";
-                    choise1 = "1. Mississippi - Missouri";
-                    choise2 = "2. Yangtze";
-                    choise3 = "3. Amazonas";
-                    choise4 = "4. Nilen";
+                    choice1 = "1. Mississippi - Missouri";
+                    choice2 = "2. Yangtze";
+                    choice3 = "3. Amazonas";
+                    choice4 = "4. Nilen";
                     answer = 4;
-                    stillPlaying = CreateQuestion(question, choise1, choise2, choise3, choise4, lifeLines, answer);
+                    stillPlaying = CreateQuestion(question, choice1, choice2, choice3, choice4, lifeLines, answer);
                 }
                 else if (questionNumber == 6)
                 {
                     question = "Hvad er Australiens nationaldyr?";
-                    choise1 = "1. Koala";
-                    choise2 = "2. Emu";
-                    choise3 = "3. Rød Kæmpekænguru";
-                    choise4 = "4. Tasmanian Devil";
+                    choice1 = "1. Koala";
+                    choice2 = "2. Emu";
+                    choice3 = "3. Rød Kæmpekænguru";
+                    choice4 = "4. Tasmanian Devil";
                     answer = 3;
-                    stillPlaying = CreateQuestion(question, choise1, choise2, choise3, choise4, lifeLines, answer);
+                    stillPlaying = CreateQuestion(question, choice1, choice2, choice3, choice4, lifeLines, answer);
                 }
                 else if (questionNumber == 7)
                 {
                     question = "Hvor mange tidszoner er der I Rusland?";
-                    choise1 = "1. 3";
-                    choise2 = "2. 4";
-                    choise3 = "3. 6";
-                    choise4 = "4. 11";
+                    choice1 = "1. 3";
+                    choice2 = "2. 4";
+                    choice3 = "3. 6";
+                    choice4 = "4. 11";
                     answer = 4;
-                    stillPlaying = CreateQuestion(question, choise1, choise2, choise3, choise4, lifeLines, answer);
+                    stillPlaying = CreateQuestion(question, choice1, choice2, choice3, choice4, lifeLines, answer);
                 }
                 else if (questionNumber == 8)
                 {
                     question = "Hvad er Canadas hovedstad?";
-                    choise1 = "1. Ottowa";
-                    choise2 = "2. Toronto";
-                    choise3 = "3. Vancouver";
-                    choise4 = "4. Quebec City";
+                    choice1 = "1. Ottowa";
+                    choice2 = "2. Toronto";
+                    choice3 = "3. Vancouver";
+                    choice4 = "4. Quebec City";
                     answer = 1;
-                    stillPlaying = CreateQuestion(question, choise1, choise2, choise3, choise4, lifeLines, answer);
+                    stillPlaying = CreateQuestion(question, choice1, choice2, choice3, choice4, lifeLines, answer);
                 }
                 else if (questionNumber == 9)
                 {
                     question = "Hvor blev det første moderne OL afholdt?";
-                    choise1 = "1. London";
-                    choise2 = "2. Napoli";
-                    choise3 = "3. Rom";
-                    choise4 = "4. Athen";
+                    choice1 = "1. London";
+                    choice2 = "2. Napoli";
+                    choice3 = "3. Rom";
+                    choice4 = "4. Athen";
                     answer = 4;
-                    stillPlaying = CreateQuestion(question, choise1, choise2, choise3, choise4, lifeLines, answer);
+                    stillPlaying = CreateQuestion(question, choice1, choice2, choice3, choice4, lifeLines, answer);
                 }
                 else if (questionNumber == 10)
                 {
                     question = "Hvor mange striber er der på det amerikanske flag?";
-                    choise1 = "1. 10";
-                    choise2 = "2. 13";
-                    choise3 = "3. 15";
-                    choise4 = "4. 52";
+                    choice1 = "1. 10";
+                    choice2 = "2. 13";
+                    choice3 = "3. 15";
+                    choice4 = "4. 52";
                     answer = 2;
-                    stillPlaying = CreateQuestion(question, choise1, choise2, choise3, choise4, lifeLines, answer);
+                    stillPlaying = CreateQuestion(question, choice1, choice2, choice3, choice4, lifeLines, answer);
                 }
                 else if (questionNumber == 11)
                 {
                     question = "Hvad skete der d. 20 Juli 1969?";
-                    choise1 = "1. Elvis Presley blev født";
-                    choise2 = "2. Adolf Hitler indledte 2. Verdenskrig med den tyske hærs invasion af Polen";
-                    choise3 = "3. Apollo 11 landede på månen";
-                    choise4 = "4. bøger og film med pornografisk indhol blev legaliseret i Danmark";
+                    choice1 = "1. Elvis Presley blev født";
+                    choice2 = "2. Adolf Hitler indledte 2. Verdenskrig med den tyske hærs invasion af Polen";
+                    choice3 = "3. Apollo 11 landede på månen";
+                    choice4 = "4. bøger og film med pornografisk indhol blev legaliseret i Danmark";
                     answer = 3;
-                    stillPlaying = CreateQuestion(question, choise1, choise2, choise3, choise4, lifeLines, answer);
+                    stillPlaying = CreateQuestion(question, choice1, choice2, choice3, choice4, lifeLines, answer);
                 }
                 else if (questionNumber == 12)
                 {
                     question = "Hvad er Japans nationalblomst?";
-                    choise1 = "1. Krokus";
-                    choise2 = "2. Kirsebærblomst";
-                    choise3 = "3. Primula";
-                    choise4 = "4. Magnolia";
+                    choice1 = "1. Krokus";
+                    choice2 = "2. Kirsebærblomst";
+                    choice3 = "3. Primula";
+                    choice4 = "4. Magnolia";
                     answer = 2;
-                    stillPlaying = CreateQuestion(question, choise1, choise2, choise3, choise4, lifeLines, answer);
+                    stillPlaying = CreateQuestion(question, choice1, choice2, choice3, choice4, lifeLines, answer);
                 }
                 else if (questionNumber == 13)
                 {
                     question = "Hvilken by kommer The Beatles fra?";
-                    choise1 = "1. Liverpool";
-                    choise2 = "2. London";
-                    choise3 = "3. Tupelo, Mississippi";
-                    choise4 = "4. Los Angeles, Californien";
+                    choice1 = "1. Liverpool";
+                    choice2 = "2. London";
+                    choice3 = "3. Tupelo, Mississippi";
+                    choice4 = "4. Los Angeles, Californien";
                     answer = 1;
-                    stillPlaying = CreateQuestion(question, choise1, choise2, choise3, choise4, lifeLines, answer);
+                    stillPlaying = CreateQuestion(question, choice1, choice2, choice3, choice4, lifeLines, answer);
                 }
                 else if (questionNumber == 14)
                 {
                     question = "Hvor mange tangenter har et klassisk klaver?";
-                    choise1 = "1. 64";
-                    choise2 = "2. 88";
-                    choise3 = "3. 100";
-                    choise4 = "4. 110";
+                    choice1 = "1. 64";
+                    choice2 = "2. 88";
+                    choice3 = "3. 100";
+                    choice4 = "4. 110";
                     answer = 2;
-                    stillPlaying = CreateQuestion(question, choise1, choise2, choise3, choise4, lifeLines, answer);
+                    stillPlaying = CreateQuestion(question, choice1, choice2, choice3, choice4, lifeLines, answer);
                 }
                 else if (questionNumber == 15)
                 {
                     question = "Hvilket land i verden har flest øer?";
-                    choise1 = "1. Japan";
-                    choise2 = "2. USA";
-                    choise3 = "3. Sverige";
-                    choise4 = "4. Island";
+                    choice1 = "1. Japan";
+                    choice2 = "2. USA";
+                    choice3 = "3. Sverige";
+                    choice4 = "4. Island";
                     answer = 3;
-                    stillPlaying = CreateQuestion(question, choise1, choise2, choise3, choise4, lifeLines, answer);
+                    stillPlaying = CreateQuestion(question, choice1, choice2, choice3, choice4, lifeLines, answer);
                 }
 
 
